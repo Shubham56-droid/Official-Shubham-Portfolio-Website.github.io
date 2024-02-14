@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content" id="content">
+        <div class="cursor" id="cursor"></div>
+
+        <div class="box1 " id="box1">
+          <div class="intro" id="intro">
+            <div class="heading" id="heading">
+              <p onmouseenter="cursorChange2(0)" onmouseleave="cursorDefault()">
+                Portfolio
+              </p>
+            </div>
+            <div class="header">
+              <div
+                class="name"
+                id="head_name"
+                onmouseenter="cursorChange2(20)"
+                onmouseleave="cursorDefault()"
+              ></div>
+              <div
+                class="ending"
+                id="head_end"
+                onmouseenter="cursorChange1(10)"
+                onmouseleave="cursorDefault()"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="nextbtn"
+            id="nextbtn"
+            onmouseenter="cursorChange1(-10)"
+            onmouseleave="cursorDefault()"
+          >
+            <ion-icon name="chevron-down-outline" id="nextpage"></ion-icon>
+          </div>
+        </div>
+
+        <div class="box2 " id="box2">
+          <div
+            class="info"
+            id="info"
+            onmouseenter="cursorChange2(10)"
+            onmouseleave="cursorDefault()"
+          ></div>
+
+          <div
+            class="tagline"
+            onmouseenter="cursorChange2(-30)"
+            onmouseleave="cursorDefault()"
+          >
+            <p class="text">
+              I like to craft solid and scalable frontend product with great
+              user experience. As a budding web developer, I am driven by a
+              passion for crafting digital experiences that seamlessly blend
+              functionality with creativity. With a fresh perspective and a
+              hunger for innovation, I embark on this journey into the world of
+              web development, eager to explore the endless possibilities of
+              coding and design.
+            </p>
+          </div>
+
+          <div
+            class="nextbtn2"
+            id="nextbtn2"
+            onmouseenter="cursorChange1(-10)"
+            onmouseleave="cursorDefault()"
+          >
+            <ion-icon name="chevron-down-outline" id="nextpage"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./anime.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
