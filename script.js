@@ -1,17 +1,21 @@
-let cursor = document.querySelector('.cursor');
 
+// basic cursor
+let cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove',(e) => {
-  cursor.style.left = (e.pageX - 5) + "px";
-  cursor.style.top = (e.pageY - 5) + "px";
+  cursor.style.left = (e.pageX - 25) + "px";
+  cursor.style.top = (e.pageY - 25) + "px";
 });
 
-let content = document.getElementById("content");
 
+// dark and light mode switching
+let content = document.getElementById("content");
 content.addEventListener("dblclick",()=>{
     content.classList.toggle("active");
 })
-const heading = document.getElementById("heading");
 
+
+// heading animation on loading time
+const heading = document.getElementById("heading");
 window.onload = () => {
     setTimeout(() => {
         heading.classList.add("active")
@@ -21,6 +25,8 @@ window.onload = () => {
 
 let intro = document.getElementById('intro');
 
+
+// default cursor
 const cursorDefault = () => {
     document.addEventListener('mousemove',(e) => {
         cursor.style.left = (e.pageX - 5) + "px";
@@ -32,6 +38,7 @@ const cursorDefault = () => {
     cursor.style.background = '#fff';
 }
 
+// cursor change type 1
 const cursorChange1 = (y) => {
     document.addEventListener('mousemove',(e) => {
         cursor.style.left = (e.pageX - 30) + "px";
@@ -43,6 +50,7 @@ const cursorChange1 = (y) => {
     cursor.style.border = "2px solid #fff";
 }
 
+// cursor change type 3
 const cursorChange2 = (x) => {
     document.addEventListener('mousemove',(e) => {
         cursor.style.left = (e.pageX - 30) + "px";
@@ -54,10 +62,10 @@ const cursorChange2 = (x) => {
     // cursor.style.border = "2px solid #fff";
 }
 
+
+// starting page 
 const name_head = "Shubham";
-
 const ending = "Design";
-
 const head_name = document.getElementById("head_name");
 const head_end = document.getElementById("head_end");
 
@@ -77,6 +85,11 @@ for (let i = 0; i < name_head.length; i++){
     head_name.appendChild(span);
 }
 
+
+
+
+
+// next page btn 1  box1 -> box2
 const nextpage = document.getElementById("nextpage");
 const box1 = document.getElementById("box1");
 const box2 = document.getElementById("box2");
@@ -85,19 +98,34 @@ nextpage.addEventListener("click",()=>{
     heading.classList.add("deactive");
     nextpage.style.transform = "translateY(50px)";
     // content.classList.add("active");
-    box2textanimation()
+    box2textanimation();
     setTimeout(() => {
         box1.classList.add("deactivate");
         nextpage.style.display = 'none';
         box2.classList.add("activate")
-    }, 700);
+    }, 800);
 })
 
-// const text = ["Hi,I'm","Shubham","Bawankar"];
-// const newtext = text.join(' ');
-// console.log(newtext);
-const text = "Hi, I'm Shubham Bawankar";
 
+
+// next page btn 2 box2 -> box3
+const box3 = document.getElementById("box3");
+const nextpagebox2 = document.getElementById("nextpagebox2");
+nextpagebox2.addEventListener("click",()=>{
+    box2textanimation2();
+    nextpagebox2.style.transform = "translateY(50px)";
+    box2.classList.add("deactivate");
+
+    setTimeout(() => {
+        box2.classList.remove("activate")
+        nextpage.style.display = 'none';
+        box3.classList.add("activate");
+    }, 800);
+})
+
+
+// box 2 text addition
+const text = "Hi, I'm Shubham Bawankar";
 let info = document.getElementById("info"); 
 for (let i = 0; i < text.length; i++) {
     const p = document.createElement("p");
@@ -106,6 +134,13 @@ for (let i = 0; i < text.length; i++) {
     span.appendChild(p);
     info.appendChild(span);  
 }
+
+
+
+
+
+
+// important future refrences
 
 // const arrtext = ["Creative","Coding","Responsive"];
 // let key_arrtext = 0;
@@ -122,7 +157,7 @@ for (let i = 0; i < text.length; i++) {
 
 //     }, 2000);
 
-
+// paragraph animation intro
 const box2textanimation = () => {
     const text1 = document.querySelector('.text');
 text1.innerHTML = text1.textContent.replace(/\S/g,"<span>$&</span>");
@@ -131,17 +166,13 @@ const animation = anime.timeline({
     easing : 'easeInOutExpo',
     loop : false,
 });
-
 animation
  .add({
-    //  rotate : function(){
-    //      return anime.random(-30,30)
-    //  },
      translateX : function(){
         return anime.random(-850,-700)
     },
     translateY : function(){
-        return anime.random(-650,-450)
+        return anime.random(-650,-550)
     },
     duration : 0,
     delay : anime.stagger(0),
@@ -151,7 +182,42 @@ animation
     rotate :0,
     translateX :0,
     translateY :0,
-    duration : 1500,
-    delay : anime.stagger(15),
+    duration : 1000,
+    delay : anime.stagger(10),
 })
+}
+
+// paragraph animation outro
+const box2textanimation2 = () => {
+    const text1 = document.querySelector('.text');
+text1.innerHTML = text1.textContent.replace(/\S/g,"<span>$&</span>");
+const animation = anime.timeline({
+    targets: '.text span',
+    easing : 'easeInOutExpo',
+    loop : false,
+});
+
+animation
+.add({
+    rotate :0,
+    translateX :0,
+    translateY :0,
+    duration : 0,
+    delay : anime.stagger(0),
+})
+ .add({
+     rotate : function(){
+         return anime.random(-360,360)
+     },
+     translateX : function(){
+        return anime.random(-500,500)
+    },
+    translateY : function(){
+        return anime.random(-450,450)
+    },
+    duration : 1000,
+    delay : anime.stagger(5),
+
+ })
+ 
 }

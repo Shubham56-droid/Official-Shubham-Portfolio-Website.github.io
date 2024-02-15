@@ -8,6 +8,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+:root{
+  --color1:crimson;
+  --color2:#00e67e;
+  --color3:rgb(239, 203, 1);
+  --color4:rgb(115, 0, 255);
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -31,7 +40,7 @@ body {
 .content {
   height: 100vh;
   width: 100%;
-  background-color: #eee;
+  background-color: #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,16 +62,16 @@ body {
   display: none;
 }
 .content.active {
-  background-color: #111;
+  background-color: #222;
   transition: 0.4s ease-in;
 }
 
 .content .intro .header {
-  mix-blend-mode: difference;
   user-select: none;
 }
 .content .intro .header #head_name {
   display: flex;
+  mix-blend-mode: difference;
 }
 .content .intro .header #head_name span p {
   font-size: 10em;
@@ -71,12 +80,31 @@ body {
 }
 .content .intro .header #head_end {
   display: flex;
+  mix-blend-mode: normal;
 }
 .content .intro .header #head_end span p {
   font-size: 7em;
   font-family: "Orbitron", sans-serif;
-  color: #fff;
+  color: #ffffff;
 }
+.content .intro .header #head_end span:nth-child(1),
+.content .intro .header #head_end span:nth-child(2)
+{
+  mix-blend-mode: difference;
+}
+.content .intro .header #head_end span:nth-child(3) p{
+  color: var(--color1);
+}
+.content .intro .header #head_end span:nth-child(4) p {
+  color: var(--color3);
+}
+.content .intro .header #head_end span:nth-child(5) p {
+  color: var(--color2);
+}
+.content .intro .header #head_end span:nth-child(6) p {
+  color: var(--color4);
+}
+
 .content .intro .heading {
   position: absolute;
   top: 150px;
@@ -164,6 +192,7 @@ body {
 
 .content .box1 .intro .header .name span:nth-child(odd) p {
   animation: sliderightname 1.8s 1 ease-out;
+
 }
 @keyframes sliderightname {
   0% {
@@ -236,6 +265,7 @@ body {
   mix-blend-mode: difference;
   z-index: 10;
 }
+
 .nextbtn {
   position: absolute;
   bottom: 0;
@@ -271,7 +301,7 @@ body {
 }
 .content .box2 .info {
   display: flex;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
 }
 .content .box2 .info span {
   /* background-color: red; */
@@ -280,13 +310,40 @@ body {
   user-select: none;
   overflow: hidden;
 }
+.content .box2 .info span:nth-child(9) p,
+.content .box2 .info span:nth-child(10) p,
+.content .box2 .info span:nth-child(11) p,
+.content .box2 .info span:nth-child(12) p{
+  mix-blend-mode: normal;
+}
+
+/* .content .box2 .info span{
+  mix-blend-mode:hard-light;
+  color: #000;
+} */
+
+.content .box2 .info span:nth-child(9) p{
+  color: var(--color1);
+}
+.content .box2 .info span:nth-child(10) p{
+  color: var(--color3);
+}
+.content .box2 .info span:nth-child(11) p{
+  color: var(--color2);
+}
+.content .box2 .info span:nth-child(12) p{
+  color: var(--color4);
+}
+
 .content .box2 .info span p {
   min-width: inherit;
-  transform: translateX(-2px);
-  font-size: 3.5rem;
-  font-family: "Ubuntu", sans-serif;
+  /* transform: translateX(-2px); */
+  font-size: 3rem;
+  /* font-family: "Ubuntu", sans-serif; */
+  font-family: "Zen Dots", sans-serif;
   color: #ddd;
   transform: translateX(0px);
+  mix-blend-mode: difference;
 }
 .content .box2.activate .info span p {
   animation: box2ltor 0.7s linear 1;
@@ -319,16 +376,105 @@ body {
 }
 .content .box2.activate .tagline p {
   color: #fff;
-  font-family: "Dancing Script", cursive;
-  font-size: 22px;
+  /* font-family: "Dancing Script", cursive; */
+  font-family: "Bad Script", cursive; 
+  font-size: 20px;
   user-select: none;
-  width: 80%;
+  width: 82%;
   margin: auto;
 }
 
-.text span
+.content .box2.activate .text span
 {
     position: relative;
     display: inline-block;
 }
 
+.content .box2.activate .aboutbox{
+  position: absolute;
+  bottom:220px;
+  left:-140px;
+  transform: rotateZ(-90deg);
+  mix-blend-mode: difference;
+}
+
+.content .box2.activate .aboutbox svg g{
+  stroke-width:2;
+  stroke:#5f5f5f;
+  animation: linecomplete 5s infinite forwards linear;
+  stroke-dashoffset:1500;
+  stroke-dasharray:1500;
+  fill: transparent;
+}
+@keyframes linecomplete 
+{
+   0%,100%{
+    stroke-dashoffset:1500;
+   }
+   50%{
+     stroke-dashoffset:0;
+   }
+}
+
+.nextbtn2 {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+  height: 50px;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.nextbtn2 ion-icon {
+  font-size: 22px;
+  mix-blend-mode: difference;
+  font-weight: 100;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.content .box2.deactivate .info span p{
+  animation: box2infoOut 0.7s linear 1;
+  transform: translateX(45px);
+}
+@keyframes box2infoOut
+{
+    0%{
+      transform: translateX(0px);
+    }
+    100%{
+      transform: translateX(45px);
+    }
+} 
+
+.content .box2.deactivate .aboutbox svg g{
+  animation: linefadeout 0.7s 1 backwards linear;
+  stroke-dashoffset:1500;
+  stroke-dasharray:1500;
+}
+@keyframes linefadeout
+{
+   0%{
+    stroke-dashoffset:0;
+   }
+   100%{
+     stroke-dashoffset:1500;
+   }
+}
+
+.content .box3 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  display: none;
+  overflow: hidden;
+}
+
+.content .box3.activate {
+  display: flex;
+}
