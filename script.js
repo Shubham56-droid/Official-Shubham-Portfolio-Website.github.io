@@ -117,6 +117,7 @@ nextpagebox2.addEventListener("click",()=>{
     box2.classList.add("deactivate");
 
     setTimeout(() => {
+        content.classList.add("active");
         box2.classList.remove("activate")
         nextpage.style.display = 'none';
         box3.classList.add("activate");
@@ -187,7 +188,7 @@ animation
 })
 }
 
-// paragraph animation outro
+// paragraph animation outro 
 const box2textanimation2 = () => {
     const text1 = document.querySelector('.text');
 text1.innerHTML = text1.textContent.replace(/\S/g,"<span>$&</span>");
