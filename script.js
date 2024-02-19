@@ -15,12 +15,12 @@ content.addEventListener("dblclick",()=>{
 
 
 // heading animation on loading time
-const heading = document.getElementById("heading");
-window.onload = () => {
-    setTimeout(() => {
-        heading.classList.add("active")
-    }, 1000);
-}
+// const heading = document.getElementById("heading");
+// window.onload = () => {
+//     setTimeout(() => {
+//         // heading.classList.add("active")
+//     }, 1000);
+// }
 
 
 let intro = document.getElementById('intro');
@@ -95,7 +95,7 @@ const box1 = document.getElementById("box1");
 const box2 = document.getElementById("box2");
 nextpage.addEventListener("click",()=>{
     intro.classList.add("deactivate");
-    heading.classList.add("deactive");
+    // heading.classList.add("deactive");
     nextpage.style.transform = "translateY(50px)";
     // content.classList.add("active");
     box2textanimation();
