@@ -10,6 +10,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
 
 :root {
   --color1: crimson;
@@ -50,7 +56,9 @@ body {
 }
 
 .content .introInitBox {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
   background: transparent;
@@ -58,12 +66,16 @@ body {
   flex-wrap: wrap;
   overflow: hidden;
 }
+.content .introInitBox.deactivate{
+  display: none;
+}
 .content .introInitBox .bgbox {
   position: relative;
-  height: 50vh;
-  width: calc(100% / 2);
+  height: calc(100vh / 3);
+  width: calc(100% / 9);
   background-color: transparent;
   overflow: hidden;
+  /* perspective: 1000px; */
 }
 
 .content .introInitBox .bgbox .inbox{
@@ -72,22 +84,8 @@ body {
   width: 100%;
   background-color: #111;
 }
-.content .introInitBox .bgbox:nth-child(1) .inbox{
-  animation: slideleftinitbox 2s 1 ease-in-out;
-  box-shadow: 7px 7px 10px #454545a3;
-}
-.content .introInitBox .bgbox:nth-child(3) .inbox{
-  animation: slidedowninitbox 2s 1 ease-in-out;
-  box-shadow: -7px 0px 7px 10px #4343439a;
-}
-.content .introInitBox .bgbox:nth-child(4) .inbox{
-  animation: sliderightinitbox 2s 1 ease-in-out;
-  box-shadow: 7px 7px 7px 10px #464646c1;
-}
-.content .introInitBox .bgbox:nth-child(2) .inbox{
-  animation: slideupinitbox 2s 1 ease-in-out;
-  box-shadow: 7px 0px 7px 10px #353535af;
-}
+
+
 
 @keyframes sliderightinitbox 
 {
@@ -127,6 +125,119 @@ body {
   }
 }
 
+
+
+
+
+.content .introInitBox .introInitContent{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width:100%;
+  height: 50vh;
+  /* background-color: red; */
+  display: flex;
+  overflow: hidden;
+}
+.content .introInitBox .introInitContent .introcontent{
+  position: relative;
+  width: calc(100%/5);
+  height: 50vh;
+  margin-left: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.content .introInitBox .introInitContent .introcontent p{
+  font-family: "Black Ops One", system-ui;
+  font-size: 12em;
+  color: #fff;
+  border-radius: 50%;
+  height: calc(100%/1.5);
+  width: calc(100%/1.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: purple; */
+  border: 5px solid #fff;
+  user-select: none;
+}
+.content .introInitBox .introInitContent .introcontent:nth-child(1),.introcontent:nth-child(2),.introcontent:nth-child(4),.introcontent:nth-child(5){
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: top;
+  background-position-x: center;
+  /* box-shadow: inset 3px -3px 5px #000000b9; */
+}
+
+.content .introInitBox .introInitContent .introcontent:nth-child(1){
+  background-image: url("./images/img\ \(1\).jpg");
+}
+.content .introInitBox .introInitContent .introcontent:nth-child(2){
+  background-image: url("./images/img\ \(3\).jpg");
+}
+.content .introInitBox .introInitContent .introcontent:nth-child(4){
+  background-image: url("./images/img\ \(2\).jpg");
+}
+.content .introInitBox .introInitContent .introcontent:nth-child(5){
+  background-image: url("./images/img\ \(4\).jpg");
+}
+
+
+.content .introInitBox .introInitContent .introcontent{
+  transform: translateY(100%) translateX(180px);
+  animation: introInitContentAnimate 3s 1 ease-in-out;
+  /* transform: translateY(0%) translateX(-20px); */
+}
+
+
+.content .introInitBox .introInitContent .introcontent:nth-child(1){
+  animation-delay: 0.1s;
+}
+.content .introInitBox .introInitContent .introcontent:nth-child(2){
+  animation-delay: 0.2s;
+}
+.content .introInitBox .introInitContent .introcontent:nth-child(3){
+  animation-delay: 0.3s;
+}
+.content .introInitBox .introInitContent .introcontent:nth-child(4){
+  animation-delay: 0.4s;
+}
+.content .introInitBox .introInitContent .introcontent:nth-child(5){
+  animation-delay: 0.5s;
+}
+@keyframes introInitContentAnimate 
+{
+  0%
+  {
+    transform: translateY(100%) translateX(500px);
+  }
+  20%
+  {
+    transform: translateY(0%) translateX(400px);
+  }
+  40%
+  {
+    transform: translateY(0%) translateX(0px);
+  }
+  85%
+  {
+    transform: translateY(0%) translateX(0px);
+  }
+  100%
+  {
+    transform: translateY(-100%) translateX(-20px);
+  }
+}
+
+
+
 .content .box1 {
   position: relative;
   height: 100vh;
@@ -149,165 +260,82 @@ body {
   user-select: none;
 }
 
-.content .intro {
-}
 .content .intro .header #head_name {
   display: flex;
+  /* justify-content: center;
+  align-items: center; */
   mix-blend-mode: difference;
 }
 .content .intro .header #head_name span p {
   font-size: 10em;
-  font-family: "Protest Guerrilla", sans-serif;
+  /* font-family: "Playfair Display SC", serif;
+  font-family: "Monoton", sans-serif; */
+  font-family: "Wallpoet", sans-serif;
   color: #fff;
 }
 .content .intro .header #head_end {
   display: flex;
+  justify-content: center;
   mix-blend-mode: normal;
 }
 .content .intro .header #head_end span p {
-  font-size: 7em;
-  font-family: "Orbitron", sans-serif;
+  font-size: 10em;
+  /* font-family: "Playfair Display SC", serif; */
+  font-family: "Wallpoet", sans-serif;
   color: #ffffff;
 }
-.content .intro .header #head_end span:nth-child(1),
-.content .intro .header #head_end span:nth-child(2) {
+.content .intro .header #head_end span{
   mix-blend-mode: difference;
 }
-.content .intro .header #head_end span:nth-child(3) p {
-  color: var(--color1);
-}
-.content .intro .header #head_end span:nth-child(4) p {
-  color: var(--color3);
-}
-.content .intro .header #head_end span:nth-child(5) p {
-  color: var(--color2);
-}
-.content .intro .header #head_end span:nth-child(6) p {
-  color: var(--color4);
-}
-/* 
-.content .intro .heading {
-  position: absolute;
-  top: 150px;
-  left: 150px;
-  transform: rotateZ(-90deg);
-  mix-blend-mode: difference;
-  user-select: none;
-  border-bottom: 2px solid #fff;
-  width: 25em;
-  padding-left: 30px;
-  overflow: hidden;
-  background-color: aqua; 
-  animation: slidedownline 1s ease-out 1;
-}
-@keyframes slidedownline {
-  0% {
-    top: -150px;
-  }
-  100% {
-    top: 150px;
-  }
-} */
-/* .content .intro.deactivate .heading {
-  top: -150px;
-  animation: slideupline 1s ease-out 1;
-  transition-delay: 2s;
-  animation-delay: 0.3s;
-} */
-/* @keyframes slideupline {
-  0% {
-    top: 150px;
-  }
-  100% {
-    top: -150px;
-  }
-} */
-
-/* .content .intro .heading p {
-  font-size: 4em;
-  color: #b8b8b8;
-  /* font-family: 'Rubik Doodle Shadow', sans-serif; 
-  font-family: "Allura", cursive;
-  transform: translateY(100px);
-} */
-/* .content .intro .heading.active p {
-  animation: slideupheading 0.8s 1;
-  transform: translateY(0px);
-  transition: 0.5s ease-out;
-} */
-/* @keyframes slideupheading {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-} */
-
-/* .content .intro .heading.deactive p {
-  animation: slideupheading 0.6s 1 ease;
-  transform: translateY(100px);
-}
-
-@keyframes slidedownheading {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(100px);
-  }
-} */
 
 .content .box1 .intro .header .name span {
   /* background: yellow; */
-  margin-left: 1px;
+  /* margin-left: 1px; */
   min-width: 50px;
   overflow: hidden;
+  height: calc(100vh / 4.5);
+  /* background-color: red; */
 }
 
 .content .box1 .intro .header .ending span {
+  margin-top: 20px;
   margin-left: 1px;
   min-width: 20px;
+  height: calc(100vh / 4);
   overflow: hidden;
+  /* background-color: purple; */
 }
 
-.content .box1 .intro .header .name span:nth-child(odd) p {
-  animation: sliderightname 1.8s 1 ease-out;
+
+.content .box1 .intro .header .name span p{
+  animation: slideupname 1.5s 1 ease-in-out;
+  transform: translateY(-10px);
 }
-@keyframes sliderightname {
+@keyframes slideupname {
   0% {
-    transform: translateX(-120px);
+    transform: translateY(155px);
   }
   100% {
-    transform: translateX(0px);
-  }
-}
-.content .box1 .intro .header .name span:nth-child(even) p {
-  animation: slidedownname 1.4s 1 ease-out;
-}
-@keyframes slidedownname {
-  0% {
-    transform: translateY(-155px);
-  }
-  100% {
-    transform: translateY(0px);
+    transform: translateY(-10px);
   }
 }
 
 .content .box1 .intro .header .ending span p {
-  animation: slideleftending 1.4s 1 ease-out;
+  animation: slideDownending 1.4s 1 ease-in-out;
+  transform: translateY(-35px);
 }
-@keyframes slideleftending {
+@keyframes slideDownending 
+{
   0% {
-    transform: translateX(90px);
+    transform: translateY(-185px);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateY(-35px);
   }
 }
 
 .content .box1 .intro.deactivate .header .name span p {
-  transform: translateX(-120px);
+  transform: translateX(-140px);
   transition: 0.5s ease;
   animation: slideleftname 0.5s 1 ease;
 }
@@ -317,12 +345,12 @@ body {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-120px);
+    transform: translateX(-140px);
   }
 }
 
 .content .box1 .intro.deactivate .header .ending span p {
-  transform: translateX(90px);
+  transform: translateX(140px);
   animation: slideleftendingrev 0.5s 1 ease-out;
 }
 @keyframes slideleftendingrev {
@@ -330,8 +358,141 @@ body {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(90px);
+    transform: translateX(140px);
   }
+}
+
+
+
+
+
+.content .box1 .intro .bgbox1Intro
+{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  height: 80vh;
+  width: 70%;
+  margin-top: 30px;
+  display:flex;
+  flex-wrap: wrap;
+  perspective: 1300px;
+  mix-blend-mode: difference;
+  /* background: #000; */
+}
+.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(1)
+{
+  position: absolute;
+  height: 32vh;
+  width: 56%;
+  border: 1px solid #fff;
+  padding: 20px;
+  animation: bgbox1Introentryline 2s 1 ease-in-out;
+}
+
+.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(1)::before
+{
+  position: absolute;
+  content:'';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  animation: bgbox1Introentry 2s 1 ease-in-out;
+}
+
+.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(1)
+{
+  animation: bgbox1Introexitline 1s 1 ease-in-out;
+}
+.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(1)::before
+{
+  animation: bgbox1Introexit 1s 1 ease-in-out;
+}
+
+@keyframes bgbox1Introentry 
+{
+  0%
+  {
+    width: 0%;
+  } 
+  100%
+  {
+    width: 100%;
+  } 
+}
+@keyframes bgbox1Introentryline 
+{
+  0%
+  {
+    width: 0%;
+    border: 1px solid #000;
+  } 
+  100%
+  {
+    width: 56%;
+    border: 1px solid #fff;
+  } 
+}
+
+
+
+
+@keyframes bgbox1Introexit 
+{
+  0%
+  {
+    width: 100%;
+  } 
+  100%
+  {
+    width: 0%;
+  } 
+}
+@keyframes bgbox1Introexitline 
+{
+  0%
+  {
+    width: 56%;
+    border: 1px solid #fff;
+  } 
+  100%
+  {
+    width: 0%;
+    border: 1px solid #000;
+  } 
+}
+
+
+.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(2)
+{
+  position: absolute;
+  top: 32vh;
+  left: 50%;
+  height: 32vh;
+  width: 56%;
+  border: 1px solid #fff;
+  animation: bgbox1Introentryline 2s 1 ease-in-out;
+
+}
+.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(2)::before
+{
+  position: absolute;
+  content:'';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  margin: -20px;
+  animation: bgbox1Introentry 2s 1 ease-in-out; 
+}
+
+.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(2)
+{
+  animation: bgbox1Introexitline 1s 1 ease-in-out;
+}
+.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(2)::before
+{
+  animation: bgbox1Introexit 1s 1 ease-in-out;
 }
 
 .cursor {
