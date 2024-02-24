@@ -46,7 +46,7 @@ class Effect {
 
 const effect = new Effect(canvas.width, canvas.height);
 let lastTime = 0;
-const fps = 120;
+const fps = 40;
 const nextFrame = 1000/fps;
 let timer = 0;
 

@@ -110,30 +110,28 @@ const animationName = [
 ];
 
 const openerAnimation = () => {
-    for (let i = 0; i < inbox.length; i++) {
-        // let timedealy = ((Math.random() * 0.6) + 0).toFixed(2);
-        let animateName2 = animationName[Math.floor(Math.random() * 4)];
-        // console.log(Math.floor(Math.random()*4));
-        // inbox[i].style.animationDelay = `${timedealy}s`;
-        console.log(animateName2);
-        inbox[i].style.animation = `${animateName2} 2s 1 forwards`;
-      }
-}
+  for (let i = 0; i < inbox.length; i++) {
+    // let timedealy = ((Math.random() * 0.6) + 0).toFixed(2);
+    let animateName2 = animationName[Math.floor(Math.random() * 4)];
+    // console.log(Math.floor(Math.random()*4));
+    // inbox[i].style.animationDelay = `${timedealy}s`;
+    console.log(animateName2);
+    inbox[i].style.animation = `${animateName2} 2s 1 forwards`;
+  }
+};
 
-
-const introInitBox = document.getElementById('introInitBox');
+const introInitBox = document.getElementById("introInitBox");
 
 // need to uncomment
-// setTimeout(() => {
-//     openerAnimation();
-//     setTimeout(() => {
-//         introInitBox.classList.add("deactivate");
-//     }, 2000);
-//     setTimeout(() => {
-//         box1.classList.remove("deactivate");
-//     }, 1500);
-// }, 3500);
-
+setTimeout(() => {
+  openerAnimation();
+  setTimeout(() => {
+    introInitBox.classList.add("deactivate");
+  }, 2000);
+  setTimeout(() => {
+    box1.classList.remove("deactivate");
+  }, 1500);
+}, 3500);
 
 // next page btn 2 box2 -> box3
 const box3 = document.getElementById("box3");
@@ -150,11 +148,32 @@ nextpagebox2.addEventListener("click", () => {
     nextpage.style.display = "none";
     box3.classList.add("activate");
     animate(0);
+
+    const arrtext = ["Web Developer", "Web Designer"];
+    let key_arrtext = 0;
+
+    setInterval(() => {
+      if (key_arrtext < 2) {
+        const box3text = document.getElementById("box3text");
+        box3text.innerText = arrtext[key_arrtext];
+        box3text.setAttribute("data-text", `${arrtext[key_arrtext]}`);
+        key_arrtext = key_arrtext + 1;
+      } else {
+        key_arrtext = 0;
+      }
+    }, 1500);
+
+    const box3text = document.getElementById("box3text");
+    setInterval(() => {
+      box3text.classList.toggle("active");
+    }, 1500);
+
+    
   }, 800);
 });
 
-// for testing 
-animate(0);
+// for testing
+// animate(0);
 
 // box 2 text addition
 const text = "Hi, I'm Shubham Bawankar";
@@ -168,31 +187,6 @@ for (let i = 0; i < text.length; i++) {
 }
 
 // important future refrences
-
-// const arrtext = ["Creative","Coding","Responsive"];
-// let key_arrtext = 0;
-
-//     setInterval(() => {
-//         if(key_arrtext < 3){
-//             const word_inp = document.getElementById("word_inp");
-//             word_inp.innerText = arrtext[key_arrtext];
-//             key_arrtext = key_arrtext + 1;
-//         }else{
-//             key_arrtext = 0;
-//         }
-
-//     }, 2000);
-
-
-
-
-const box3text = document.getElementById("box3text");
-setInterval(() => {
-  box3text.classList.toggle("active");
-}, 1500);
-
-
-
 
 // paragraph animation intro
 const box2textanimation = () => {
