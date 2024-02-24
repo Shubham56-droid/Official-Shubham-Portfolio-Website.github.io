@@ -10,12 +10,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
 
 :root {
   --color1: crimson;
@@ -66,7 +66,7 @@ body {
   flex-wrap: wrap;
   overflow: hidden;
 }
-.content .introInitBox.deactivate{
+.content .introInitBox.deactivate {
   display: none;
 }
 .content .introInitBox .bgbox {
@@ -78,71 +78,61 @@ body {
   /* perspective: 1000px; */
 }
 
-.content .introInitBox .bgbox .inbox{
+.content .introInitBox .bgbox .inbox {
   position: relative;
   height: 100%;
   width: 100%;
   background-color: #111;
 }
 
-
-
-@keyframes sliderightinitbox 
-{
-  0%{
+@keyframes sliderightinitbox {
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(100%);
   }
 }
-@keyframes slideleftinitbox 
-{
-  0%{
+@keyframes slideleftinitbox {
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(-100%);
   }
 }
-@keyframes slidedowninitbox 
-{
-  0%{
+@keyframes slidedowninitbox {
+  0% {
     transform: translateY(0);
   }
-  100%{
+  100% {
     transform: translateY(100%);
   }
 }
 
-@keyframes slideupinitbox 
-{
-  0%{
+@keyframes slideupinitbox {
+  0% {
     transform: translateY(0);
   }
-  100%{
+  100% {
     transform: translateY(-100%);
   }
 }
 
-
-
-
-
-.content .introInitBox .introInitContent{
+.content .introInitBox .introInitContent {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  width:100%;
+  width: 100%;
   height: 50vh;
   /* background-color: red; */
   display: flex;
   overflow: hidden;
 }
-.content .introInitBox .introInitContent .introcontent{
+.content .introInitBox .introInitContent .introcontent {
   position: relative;
-  width: calc(100%/5);
+  width: calc(100% / 5);
   height: 50vh;
   margin-left: 20px;
   overflow: hidden;
@@ -152,13 +142,13 @@ body {
   border-radius: 15px;
 }
 
-.content .introInitBox .introInitContent .introcontent p{
+.content .introInitBox .introInitContent .introcontent p {
   font-family: "Black Ops One", system-ui;
   font-size: 12em;
   color: #fff;
   border-radius: 50%;
-  height: calc(100%/1.5);
-  width: calc(100%/1.2);
+  height: calc(100% / 1.5);
+  width: calc(100% / 1.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,8 +156,11 @@ body {
   border: 5px solid #fff;
   user-select: none;
 }
-.content .introInitBox .introInitContent .introcontent:nth-child(1),.introcontent:nth-child(2),.introcontent:nth-child(4),.introcontent:nth-child(5){
-  background-size:cover;
+.content .introInitBox .introInitContent .introcontent:nth-child(1),
+.introcontent:nth-child(2),
+.introcontent:nth-child(4),
+.introcontent:nth-child(5) {
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -176,67 +169,57 @@ body {
   /* box-shadow: inset 3px -3px 5px #000000b9; */
 }
 
-.content .introInitBox .introInitContent .introcontent:nth-child(1){
+.content .introInitBox .introInitContent .introcontent:nth-child(1) {
   background-image: url("./images/img\ \(1\).jpg");
 }
-.content .introInitBox .introInitContent .introcontent:nth-child(2){
+.content .introInitBox .introInitContent .introcontent:nth-child(2) {
   background-image: url("./images/img\ \(3\).jpg");
 }
-.content .introInitBox .introInitContent .introcontent:nth-child(4){
+.content .introInitBox .introInitContent .introcontent:nth-child(4) {
   background-image: url("./images/img\ \(2\).jpg");
 }
-.content .introInitBox .introInitContent .introcontent:nth-child(5){
+.content .introInitBox .introInitContent .introcontent:nth-child(5) {
   background-image: url("./images/img\ \(4\).jpg");
 }
 
-
-.content .introInitBox .introInitContent .introcontent{
+.content .introInitBox .introInitContent .introcontent {
   transform: translateY(100%) translateX(180px);
   animation: introInitContentAnimate 3s 1 ease-in-out;
   /* transform: translateY(0%) translateX(-20px); */
 }
 
-
-.content .introInitBox .introInitContent .introcontent:nth-child(1){
+.content .introInitBox .introInitContent .introcontent:nth-child(1) {
   animation-delay: 0.1s;
 }
-.content .introInitBox .introInitContent .introcontent:nth-child(2){
+.content .introInitBox .introInitContent .introcontent:nth-child(2) {
   animation-delay: 0.2s;
 }
-.content .introInitBox .introInitContent .introcontent:nth-child(3){
+.content .introInitBox .introInitContent .introcontent:nth-child(3) {
   animation-delay: 0.3s;
 }
-.content .introInitBox .introInitContent .introcontent:nth-child(4){
+.content .introInitBox .introInitContent .introcontent:nth-child(4) {
   animation-delay: 0.4s;
 }
-.content .introInitBox .introInitContent .introcontent:nth-child(5){
+.content .introInitBox .introInitContent .introcontent:nth-child(5) {
   animation-delay: 0.5s;
 }
-@keyframes introInitContentAnimate 
-{
-  0%
-  {
+@keyframes introInitContentAnimate {
+  0% {
     transform: translateY(100%) translateX(500px);
   }
-  20%
-  {
+  20% {
     transform: translateY(0%) translateX(400px);
   }
-  40%
-  {
+  40% {
     transform: translateY(0%) translateX(0px);
   }
-  85%
-  {
+  85% {
     transform: translateY(0%) translateX(0px);
   }
-  100%
-  {
+  100% {
     transform: translateY(-100%) translateX(-20px);
   }
 }
-
-
 
 .content .box1 {
   position: relative;
@@ -284,7 +267,7 @@ body {
   font-family: "Wallpoet", sans-serif;
   color: #ffffff;
 }
-.content .intro .header #head_end span{
+.content .intro .header #head_end span {
   mix-blend-mode: difference;
 }
 
@@ -306,8 +289,7 @@ body {
   /* background-color: purple; */
 }
 
-
-.content .box1 .intro .header .name span p{
+.content .box1 .intro .header .name span p {
   animation: slideupname 1.5s 1 ease-in-out;
   transform: translateY(-10px);
 }
@@ -324,8 +306,7 @@ body {
   animation: slideDownending 1.4s 1 ease-in-out;
   transform: translateY(-35px);
 }
-@keyframes slideDownending 
-{
+@keyframes slideDownending {
   0% {
     transform: translateY(-185px);
   }
@@ -362,27 +343,21 @@ body {
   }
 }
 
-
-
-
-
-.content .box1 .intro .bgbox1Intro
-{
+.content .box1 .intro .bgbox1Intro {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 80vh;
   width: 70%;
   margin-top: 30px;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   perspective: 1300px;
   mix-blend-mode: difference;
   /* background: #000; */
 }
-.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(1)
-{
+.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(1) {
   position: absolute;
   height: 32vh;
   width: 56%;
@@ -391,81 +366,61 @@ body {
   animation: bgbox1Introentryline 2s 1 ease-in-out;
 }
 
-.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(1)::before
-{
+.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(1)::before {
   position: absolute;
-  content:'';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: #fff;
   animation: bgbox1Introentry 2s 1 ease-in-out;
 }
 
-.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(1)
-{
+.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(1) {
   animation: bgbox1Introexitline 1s 1 ease-in-out;
 }
-.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(1)::before
-{
+.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(1)::before {
   animation: bgbox1Introexit 1s 1 ease-in-out;
 }
 
-@keyframes bgbox1Introentry 
-{
-  0%
-  {
+@keyframes bgbox1Introentry {
+  0% {
     width: 0%;
-  } 
-  100%
-  {
+  }
+  100% {
     width: 100%;
-  } 
+  }
 }
-@keyframes bgbox1Introentryline 
-{
-  0%
-  {
+@keyframes bgbox1Introentryline {
+  0% {
     width: 0%;
     border: 1px solid #000;
-  } 
-  100%
-  {
+  }
+  100% {
     width: 56%;
     border: 1px solid #fff;
-  } 
+  }
 }
 
-
-
-
-@keyframes bgbox1Introexit 
-{
-  0%
-  {
+@keyframes bgbox1Introexit {
+  0% {
     width: 100%;
-  } 
-  100%
-  {
+  }
+  100% {
     width: 0%;
-  } 
+  }
 }
-@keyframes bgbox1Introexitline 
-{
-  0%
-  {
+@keyframes bgbox1Introexitline {
+  0% {
     width: 56%;
     border: 1px solid #fff;
-  } 
-  100%
-  {
+  }
+  100% {
     width: 0%;
     border: 1px solid #000;
-  } 
+  }
 }
 
-
-.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(2)
-{
+.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(2) {
   position: absolute;
   top: 32vh;
   left: 50%;
@@ -473,25 +428,21 @@ body {
   width: 56%;
   border: 1px solid #fff;
   animation: bgbox1Introentryline 2s 1 ease-in-out;
-
 }
-.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(2)::before
-{
+.content .box1 .intro .bgbox1Intro .bgbox1box:nth-child(2)::before {
   position: absolute;
-  content:'';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: #fff;
   margin: -20px;
-  animation: bgbox1Introentry 2s 1 ease-in-out; 
+  animation: bgbox1Introentry 2s 1 ease-in-out;
 }
 
-.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(2)
-{
+.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(2) {
   animation: bgbox1Introexitline 1s 1 ease-in-out;
 }
-.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(2)::before
-{
+.content .box1 .intro.deactivate .bgbox1Intro .bgbox1box:nth-child(2)::before {
   animation: bgbox1Introexit 1s 1 ease-in-out;
 }
 
@@ -716,10 +667,190 @@ body {
   background-color: #111;
 }
 
-.content .box3.activate #canvas1{
+.content .box3.activate #canvas1 {
   background-color: #333;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+  user-select: none;
 }
 
+.content .box3.activate .box3content {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+.box3content .text{
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.7em;
+  transform: scale(2);
+  padding: 30px;
+  letter-spacing: 2px;
+  /* text-transform: uppercase; */
+  font-family: 'Poppins',sans-serif;
+}
+.box3content .text::before,
+.box3content .text::after {
+  padding: 30px;
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: black; */
+  overflow: hidden;
+  top: 0;
+  left:0;
+}
+.box3content .text.active::before{
+  left: 2px;
+  text-shadow: -2px 0 red;
+  animation: glitch-1 2s linear infinite reverse;
+}
+.box3content .text.active::after{
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  animation: glitch-2 2s linear infinite reverse;
+}
+@keyframes glitch-1 {
+  0% {
+    clip: rect(132px, auto, 101px, 30px);
+  }
+  5% {
+    clip: rect(17px, auto, 94px, 30px);
+  }
+  10% {
+    clip: rect(40px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(87px, auto, 82px, 30px);
+  }
+  20% {
+    clip: rect(137px, auto, 61px, 30px);
+  }
+  25% {
+    clip: rect(34px, auto, 14px, 30px);
+  }
+  30% {
+    clip: rect(133px, auto, 74px, 30px);
+  }
+  35% {
+    clip: rect(76px, auto, 107px, 30px);
+  }
+  40% {
+    clip: rect(59px, auto, 130px, 30px);
+  }
+  45% {
+    clip: rect(29px, auto, 84px, 30px);
+  }
+  50% {
+    clip: rect(22px, auto, 67px, 30px);
+  }
+  55% {
+    clip: rect(67px, auto, 62px, 30px);
+  }
+  60% {
+    clip: rect(10px, auto, 105px, 30px);
+  }
+  65% {
+    clip: rect(78px, auto, 115px, 30px);
+  }
+  70% {
+    clip: rect(105px, auto, 13px, 30px);
+  }
+  75% {
+    clip: rect(15px, auto, 75px, 30px);
+  }
+  80% {
+    clip: rect(66px, auto, 39px, 30px);
+  }
+  85% {
+    clip: rect(133px, auto, 73px, 30px);
+  }
+  90% {
+    clip: rect(36px, auto, 128px, 30px);
+  }
+  95% {
+    clip: rect(68px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(14px, auto, 100px, 30px);
+  }
+}
+@keyframes glitch-2 {
+  0% {
+    clip: rect(129px, auto, 36px, 30px);
+  }
+  5% {
+    clip: rect(36px, auto, 4px, 30px);
+  }
+  10% {
+    clip: rect(85px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(91px, auto, 91px, 30px);
+  }
+  20% {
+    clip: rect(148px, auto, 138px, 30px);
+  }
+  25% {
+    clip: rect(38px, auto, 122px, 30px);
+  }
+  30% {
+    clip: rect(69px, auto, 54px, 30px);
+  }
+  35% {
+    clip: rect(98px, auto, 71px, 30px);
+  }
+  40% {
+    clip: rect(146px, auto, 34px, 30px);
+  }
+  45% {
+    clip: rect(134px, auto, 43px, 30px);
+  }
+  50% {
+    clip: rect(102px, auto, 80px, 30px);
+  }
+  55% {
+    clip: rect(119px, auto, 44px, 30px);
+  }
+  60% {
+    clip: rect(106px, auto, 99px, 30px);
+  }
+  65% {
+    clip: rect(141px, auto, 74px, 30px);
+  }
+  70% {
+    clip: rect(20px, auto, 78px, 30px);
+  }
+  75% {
+    clip: rect(133px, auto, 79px, 30px);
+  }
+  80% {
+    clip: rect(78px, auto, 52px, 30px);
+  }
+  85% {
+    clip: rect(35px, auto, 39px, 30px);
+  }
+  90% {
+    clip: rect(67px, auto, 70px, 30px);
+  }
+  95% {
+    clip: rect(71px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(83px, auto, 40px, 30px);
+  }
+}

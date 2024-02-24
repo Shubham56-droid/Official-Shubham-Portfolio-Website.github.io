@@ -49,6 +49,18 @@ const cursorChange2 = (x) => {
   // cursor.style.border = "2px solid #fff";
 };
 
+// cursor change type 3
+const box3Cursor = () => {
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.pageX - 30 + "px";
+    cursor.style.top = e.pageY - 30 + "px";
+  });
+  cursor.style.height = 0 + "px";
+  cursor.style.width = 0 + "px";
+  cursor.style.background = "transparent";
+  // cursor.style.border = "2px solid #fff";
+};
+
 // starting page
 const name_head = "Shubham";
 const ending = "Design";
@@ -170,6 +182,17 @@ for (let i = 0; i < text.length; i++) {
 //         }
 
 //     }, 2000);
+
+
+
+
+const box3text = document.getElementById("box3text");
+setInterval(() => {
+  box3text.classList.toggle("active");
+}, 1500);
+
+
+
 
 // paragraph animation intro
 const box2textanimation = () => {
