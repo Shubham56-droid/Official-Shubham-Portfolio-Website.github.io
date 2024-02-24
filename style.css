@@ -713,4 +713,13 @@ body {
 
 .content .box3.activate {
   display: flex;
+  background-color: #111;
 }
+
+.content .box3.activate #canvas1{
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+

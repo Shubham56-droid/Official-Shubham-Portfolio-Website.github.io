@@ -110,32 +110,39 @@ const openerAnimation = () => {
 
 
 const introInitBox = document.getElementById('introInitBox');
-setTimeout(() => {
-    openerAnimation();
-    setTimeout(() => {
-        introInitBox.classList.add("deactivate");
-    }, 2000);
-    setTimeout(() => {
-        box1.classList.remove("deactivate");
-    }, 1500);
-}, 3500);
+
+// need to uncomment
+// setTimeout(() => {
+//     openerAnimation();
+//     setTimeout(() => {
+//         introInitBox.classList.add("deactivate");
+//     }, 2000);
+//     setTimeout(() => {
+//         box1.classList.remove("deactivate");
+//     }, 1500);
+// }, 3500);
 
 
 // next page btn 2 box2 -> box3
 const box3 = document.getElementById("box3");
 const nextpagebox2 = document.getElementById("nextpagebox2");
+const canvas1 = document.getElementById("canvas1");
+
 nextpagebox2.addEventListener("click", () => {
   box2textanimation2();
   nextpagebox2.style.transform = "translateY(50px)";
   box2.classList.add("deactivate");
-
   setTimeout(() => {
-    content.classList.add("active");
+    // content.classList.add("active");
     box2.classList.remove("activate");
     nextpage.style.display = "none";
     box3.classList.add("activate");
+    animate(0);
   }, 800);
 });
+
+// for testing 
+animate(0);
 
 // box 2 text addition
 const text = "Hi, I'm Shubham Bawankar";
