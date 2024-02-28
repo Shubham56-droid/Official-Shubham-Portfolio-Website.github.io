@@ -690,17 +690,17 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-.box3content .text{
+.box3content .text {
   position: relative;
   color: #fff;
   font-weight: 700;
-  font-size: 0.7em;
+  font-size: 0.6em;
   transform: scale(2);
   padding: 30px;
   letter-spacing: 2px;
   /* text-transform: uppercase; */
-  font-family: 'Poppins',sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin-top: -25px;
 }
 .box3content .text::before,
 .box3content .text::after {
@@ -712,14 +712,14 @@ body {
   /* background: black; */
   overflow: hidden;
   top: 0;
-  left:0;
+  left: 0;
 }
-.box3content .text.active::before{
+.box3content .text.active::before {
   left: 3px;
   text-shadow: -3px 0 red;
   animation: glitch-1 2s linear infinite reverse;
 }
-.box3content .text.active::after{
+.box3content .text.active::after {
   left: -3px;
   text-shadow: -3px 0 blue;
   animation: glitch-2 2s linear infinite reverse;
@@ -853,4 +853,53 @@ body {
   100% {
     clip: rect(83px, auto, 40px, 30px);
   }
+}
+
+.bgbox3text {
+  position: relative;
+  clip-path: polygon(
+    6.77% 0.38%,
+    44.44% 0%,
+    49.79% 8.14%,
+    94.08% 8.14%,
+    100% 17.2%,
+    100% 84.55%,
+    94.08% 90.86%,
+    42.37% 90.86%,
+    38.01% 82.36%,
+    6.77% 82.36%,
+    0% 68.68%,
+    0% 13.57%
+  );
+  height: 300px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: #ffffff;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.bgbox3text::before{
+  position: absolute;
+  content:'';
+  clip-path: polygon(
+    6.77% 0.38%,
+    44.44% 0%,
+    49.79% 8.14%,
+    94.08% 8.14%,
+    100% 17.2%,
+    100% 84.55%,
+    94.08% 90.86%,
+    42.37% 90.86%,
+    38.01% 82.36%,
+    6.77% 82.36%,
+    0% 68.68%,
+    0% 13.57%
+  );
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  background-color: rgb(0, 0, 0);
 }
