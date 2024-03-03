@@ -123,15 +123,15 @@ const openerAnimation = () => {
 const introInitBox = document.getElementById("introInitBox");
 
 // need to uncomment
-setTimeout(() => {
-  openerAnimation();
-  setTimeout(() => {
-    introInitBox.classList.add("deactivate");
-  }, 2000);
-  setTimeout(() => {
-    box1.classList.remove("deactivate");
-  }, 1500);
-}, 3500);
+// setTimeout(() => {
+//   openerAnimation();
+//   setTimeout(() => {
+//     introInitBox.classList.add("deactivate");
+//   }, 2000);
+//   setTimeout(() => {
+//     box1.classList.remove("deactivate");
+//   }, 1500);
+// }, 3500);
 
 // next page btn 2 box2 -> box3
 const box3 = document.getElementById("box3");
@@ -196,6 +196,8 @@ nextpagebox2.addEventListener("click", () => {
 // setInterval(() => {
 //   box3text.classList.toggle("active");
 // }, 1500);
+
+
 // for testing above remove below section
 
 
