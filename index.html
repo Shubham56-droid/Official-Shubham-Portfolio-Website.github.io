@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./box3TextGlitch/style.css">
     <link rel="stylesheet" href="./style.css" />
     
   </head>
@@ -148,27 +147,55 @@
           </div>
         </div>
 
-        <div class="box3 activate" id="box3" onmouseenter="box3Cursor()"
-        onmouseleave="box3Cursor()">
 
-          <!-- <canvas class="canvas1" id="canvas1"></canvas> -->
+
+
+
+
+        <div class="box3 activate" id="box3" onmouseenter="cursorDefault()"
+        onmouseleave="cursorDefault()">
+
           <div class="box3content">
-              <!-- <div class="bgbox3text">
-                <h2 class="text active" id="box3text" data-text="">
-                </h2>
-              </div> -->
-
               <div class="box3content">
-                <div class="box3info1">
+                <div class="box3info1" onmouseenter="cursorChange1(20)"
+                onmouseleave="cursorDefault()">
                   <p id="boardtext"> What I Do? <span></span> High End Digital Experience <span></span> My Work <span></span> Featured Work <span></span> </p>
                 </div>
+                <div class="text">
+                  <div class="textbox"><p>Website</p></div> 
 
-                <p class="text" data-text="Website developer">Website developer</p>
+                  <div class="textbox"><p class="texthacked" id="texthacked" data-value="developer">developer</p></div>
+
+                </div>
               </div>
           </div>
 
 
+          <div class="outro">
+            <div class="boxoutro"></div>
+            <div class="boxoutro"></div>
+            <div class="boxoutro"></div>
+            <div class="boxoutro"></div>
+            <div class="boxoutro"></div>
+          </div>
+
         </div>
+
+
+        <!-- <div class="box4" id="box4">
+
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
 
@@ -181,7 +208,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="./anime.min.js"></script>
-    <script src="./box3BgAnimation/scriptBg.js"></script>
+    <script src="./texthacked.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

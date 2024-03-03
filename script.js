@@ -173,42 +173,6 @@ nextpagebox2.addEventListener("click", () => {
 });
 
 
-
-
-
-
-// for testing after remove below section
-// animate(0);
-
-// const arrtext = ["Web Developer", "Web Designer"];
-// let key_arrtext = 0;
-// setInterval(() => {
-//   if (key_arrtext < 2) {
-//     const box3text = document.getElementById("box3text");
-//     box3text.innerText = arrtext[key_arrtext];
-//     box3text.setAttribute("data-text", `${arrtext[key_arrtext]}`);
-//     key_arrtext = key_arrtext + 1;
-//   } else {
-//     key_arrtext = 0;
-//   }
-// }, 1500);
-// const box3text = document.getElementById("box3text");
-// setInterval(() => {
-//   box3text.classList.toggle("active");
-// }, 1500);
-
-
-// for testing above remove below section
-
-
-
-
-
-
-
-
-
-
 // box 2 text addition
 const text = "Hi, I'm Shubham Bawankar";
 let info = document.getElementById("info");

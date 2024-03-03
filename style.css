@@ -1,6 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik+Doodle+Shadow&display=swap");
@@ -20,6 +17,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 
 :root {
   --color1: crimson;
@@ -459,7 +459,7 @@ body {
   pointer-events: none;
   transition: 0.4s ease-out;
   mix-blend-mode: difference;
-  z-index: 10;
+  z-index: 100000;
 }
 
 .nextbtn {
@@ -667,7 +667,7 @@ body {
 
 .content .box3.activate {
   display: flex;
-  background: linear-gradient(90deg,#111 50%,#eee 50%);
+  background: linear-gradient(90deg, #111 50%, #eee 50%);
 }
 
 .content .box3.activate .box3content {
@@ -690,7 +690,6 @@ body {
   transform: translate(-50%, -50%);
   height: 20vh;
   width: 100%;
-  /* background-color: #000000; */
   font-size: 50px;
   cursor: pointer;
   display: flex;
@@ -698,22 +697,24 @@ body {
   backdrop-filter: blur(10px);
   overflow: hidden;
   mix-blend-mode: difference;
+  z-index: 100;
 }
 .content .box3.activate .box3content .box3info1 p {
   display: flex;
   justify-content: space-between;
   align-items: center;
   animation: slidetextbox3 15s infinite linear;
-  transform: translateX(100px);
+  transform: translateX(0px);
   letter-spacing: 5px;
   font-style: italic;
   overflow-y: hidden;
   width: 1500px;
   font-family: "Protest Guerrilla", sans-serif;
+  
 }
 @keyframes slidetextbox3 {
   0% {
-    transform: translateX(1500px);
+    transform: translateX(1600px);
   }
   100% {
     transform: translateX(-1500px);
@@ -729,6 +730,7 @@ body {
   height: 3px;
   background: #fff;
   background-color: crimson;
+  z-index: 100;
 }
 .content .box3.activate .box3content .box3info1:hover span {
   transform: rotateZ(-45deg);
@@ -771,7 +773,7 @@ body {
   transition: 0.5s ease;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
 .content .box3.activate .box3content .text {
   font-family: "Protest Guerrilla", sans-serif;
@@ -784,11 +786,74 @@ body {
   font-size: 0.8em;
   font-weight: 500;
   text-shadow: 4px 4px 7px #ffffffbe;
+  user-select: none;
+}
+.content .box3.activate .box3content .text::before
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  content:'';
+  height:0px;
+  width:0px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  animation: ringbox3 1.2s 1 ease-out;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+.content .box3.activate .box3content .text::after
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  content:'';
+  height: 0px;
+  width: 0px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  animation: ringbox3 1.2s 1 ease-out;
+  animation-delay: 0.5s;
+}
+@keyframes ringbox3
+{
+  0%
+  {
+    height: 50px;
+    width: 50px;
+  }
+  100%
+  {
+    height:700px;
+    width:700px;
+  }
+}
+
+.content .box3.activate .box3content .text .textbox {
+  height: 30vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+
+
+.content .box3.activate .box3content .text .textbox p{
+  transform: translateY(0px);
+  animation: textupbox3info 1s 1 ease-out;
+}
+
+@keyframes textupbox3info 
+{
+  0%
+  {
+    transform: translateY(200px);
+  }
+  100%
+  {
+    transform: translateY(0px);
+  }
+}
 
 .content .box3.activate .box3content .box3info1 #boardtext {
   font-family: "Kaushan Script", cursive;
