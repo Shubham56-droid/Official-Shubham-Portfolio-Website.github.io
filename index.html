@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Shubham Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
-    
+    <link rel="stylesheet" href="./box4/css/base.css">
   </head>
   <body>
-    <div class="container">
+    <div class="container" >
       <div class="content" id="content">
         <div class="cursor" id="cursor"></div>
 
-        <div class="introInitBox deactivate" id="introInitBox">
+        <div class="introInitBox" id="introInitBox" onmouseenter="cursorDefault()"
+        onmouseleave="cursorDefault()">
 
           <div class="bgbox"><div class="inbox"></div></div>
           <div class="bgbox"><div class="inbox"></div></div>
@@ -152,39 +153,99 @@
 
 
 
-        <div class="box3 activate" id="box3" onmouseenter="cursorDefault()"
+        <div class="box3" id="box3" onmouseenter="cursorDefault()"
         onmouseleave="cursorDefault()">
 
           <div class="box3content">
               <div class="box3content">
-                <div class="box3info1" onmouseenter="cursorChange1(20)"
+                <div class="box3info1" id="box3info1" onmouseenter="cursorChange4(60)"
                 onmouseleave="cursorDefault()">
                   <p id="boardtext"> What I Do? <span></span> High End Digital Experience <span></span> My Work <span></span> Featured Work <span></span> </p>
                 </div>
                 <div class="text">
-                  <div class="textbox"><p>Website</p></div> 
+                  <div class="textbox" id="textboxbox3_1" onmouseenter="cursorChange2(3)"
+                  onmouseleave="cursorDefault()"><p>Website</p></div> 
 
-                  <div class="textbox"><p class="texthacked" id="texthacked" data-value="developer">developer</p></div>
+                  <div class="textbox" id="textboxbox3_2" onmouseenter="cursorChange2(3)"
+                  onmouseleave="cursorDefault()"><p class="texthacked" id="texthacked" data-value="developer">developer</p></div>
 
                 </div>
               </div>
           </div>
-
-
-          <div class="outro">
+          <div class="outro" id="outro">
+            <div class="boxoutro"></div>
+            <div class="boxoutro"></div>
             <div class="boxoutro"></div>
             <div class="boxoutro"></div>
             <div class="boxoutro"></div>
             <div class="boxoutro"></div>
             <div class="boxoutro"></div>
           </div>
-
         </div>
 
 
-        <!-- <div class="box4" id="box4">
 
-        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="demo-1 box4" id="box4">
+        
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -207,8 +268,14 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+
+   
+    <!-- <script src="./script.js"></script> -->
+
     <script src="./anime.min.js"></script>
-    <script src="./texthacked.js"></script>
+    <script src="./texthacked.js"></script>  
     <script src="./script.js"></script>
+
   </body>
 </html>

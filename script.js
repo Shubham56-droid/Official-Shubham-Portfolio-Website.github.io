@@ -61,6 +61,18 @@ const box3Cursor = () => {
   // cursor.style.border = "2px solid #fff";
 };
 
+// cursor change type 4
+const cursorChange4 = (y) => {
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.pageX - 60 + "px";
+    cursor.style.top = e.pageY - 60 + "px";
+  });
+  cursor.style.height = 75 + y + "px";
+  cursor.style.width = 75 + y + "px";
+  cursor.style.background = "#000";
+  cursor.style.border = "2px solid #fff";
+};
+
 // starting page
 const name_head = "Shubham";
 const ending = "Design";
@@ -123,15 +135,15 @@ const openerAnimation = () => {
 const introInitBox = document.getElementById("introInitBox");
 
 // need to uncomment
-// setTimeout(() => {
-//   openerAnimation();
-//   setTimeout(() => {
-//     introInitBox.classList.add("deactivate");
-//   }, 2000);
-//   setTimeout(() => {
-//     box1.classList.remove("deactivate");
-//   }, 1500);
-// }, 3500);
+setTimeout(() => {
+  openerAnimation();
+  setTimeout(() => {
+    introInitBox.classList.add("deactivate");
+  }, 2000);
+  setTimeout(() => {
+    box1.classList.remove("deactivate");
+  }, 1500);
+}, 3500);
 
 // next page btn 2 box2 -> box3
 const box3 = document.getElementById("box3");
@@ -247,3 +259,21 @@ const box2textanimation2 = () => {
       delay: anime.stagger(5),
     });
 };
+
+const box3info1 = document.getElementById("box3info1");
+const outro = document.getElementById("outro");
+const textboxbox3_1 = document.getElementById("textboxbox3_1");
+const textboxbox3_2 = document.getElementById("textboxbox3_2");
+const box4 = document.getElementById("box4");
+
+box3info1.addEventListener("click",()=>{
+  outro.classList.add("active");
+  box3info1.classList.add("deactivate")
+  textboxbox3_1.classList.add("deactivate");
+  textboxbox3_2.classList.add("deactivate");
+  box3.classList.add("deactive");
+  setTimeout(() => {
+    box3.classList.remove("activate");
+    box4.classList.remove("deactivate");
+  },1600);
+})

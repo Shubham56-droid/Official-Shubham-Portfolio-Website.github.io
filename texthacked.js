@@ -39,4 +39,4 @@ const texthack = () => {
 
 setInterval(() => {
     texthack(); 
-}, 3000);
+}, 4000);
