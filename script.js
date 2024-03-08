@@ -1,3 +1,4 @@
+
 // basic cursor
 let cursor = document.querySelector(".cursor");
 document.addEventListener("mousemove", (e) => {
@@ -127,7 +128,7 @@ const openerAnimation = () => {
     let animateName2 = animationName[Math.floor(Math.random() * 4)];
     // console.log(Math.floor(Math.random()*4));
     // inbox[i].style.animationDelay = `${timedealy}s`;
-    console.log(animateName2);
+    // console.log(animateName2);
     inbox[i].style.animation = `${animateName2} 2s 1 forwards`;
   }
 };
@@ -142,6 +143,7 @@ setTimeout(() => {
   }, 2000);
   setTimeout(() => {
     box1.classList.remove("deactivate");
+   
   }, 1500);
 }, 3500);
 
@@ -159,28 +161,6 @@ nextpagebox2.addEventListener("click", () => {
     box2.classList.remove("activate");
     nextpage.style.display = "none";
     box3.classList.add("activate");
-    animate(0);
-
-    const arrtext = ["Web Developer", "Web Designer"];
-    let key_arrtext = 0;
-
-    setInterval(() => {
-      if (key_arrtext < 2) {
-        const box3text = document.getElementById("box3text");
-        box3text.innerText = arrtext[key_arrtext];
-        box3text.setAttribute("data-text", `${arrtext[key_arrtext]}`);
-        key_arrtext = key_arrtext + 1;
-      } else {
-        key_arrtext = 0;
-      }
-    }, 1500);
-
-    const box3text = document.getElementById("box3text");
-    setInterval(() => {
-      box3text.classList.toggle("active");
-    }, 1500);
-
-    
   }, 800);
 });
 
@@ -216,7 +196,7 @@ const box2textanimation = () => {
         return anime.random(-650, -550);
       },
       duration: 0,
-      delay: anime.stagger(0),
+      delay: anime.stagger(0.1),
     })
     .add({
       rotate: 0,
@@ -265,6 +245,20 @@ const outro = document.getElementById("outro");
 const textboxbox3_1 = document.getElementById("textboxbox3_1");
 const textboxbox3_2 = document.getElementById("textboxbox3_2");
 const box4 = document.getElementById("box4");
+const container = document.getElementById("container");
+
+
+function checkanimejs(){
+  if(container.classList.contains("deactivate")){
+    console.log("true");
+    box4activationscript();
+  }else{
+    console.log("false");
+    basicanimationanimemin();
+  }
+}
+
+checkanimejs();
 
 box3info1.addEventListener("click",()=>{
   outro.classList.add("active");
@@ -275,5 +269,6 @@ box3info1.addEventListener("click",()=>{
   setTimeout(() => {
     box3.classList.remove("activate");
     box4.classList.remove("deactivate");
-  },1600);
+    container.classList.add("deactivate");
+  },1650);
 })
