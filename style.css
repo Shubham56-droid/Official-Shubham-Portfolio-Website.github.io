@@ -22,6 +22,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
+
 :root {
   --color1: crimson;
   --color2: #00e67e;
@@ -38,6 +39,7 @@ body {
   height: 100vh;
   width: 100%;
 }
+
 .container {
   position: relative;
   height: 100vh;
@@ -48,10 +50,10 @@ body {
   align-items: center;
   overflow: hidden;
 }
+
 .content {
   height: 100vh;
   width: 100%;
-  background-color: #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +61,9 @@ body {
   transition: 0.4s ease-in;
   overflow: hidden;
 }
-
+.content.activate{
+  background-color: #ddd;
+}
 .content .introInitBox {
   position: absolute;
   top: 0;
@@ -1067,10 +1071,8 @@ body {
    }
  }
 
-/* .box4{
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background: #111;
-  mix-blend-mode: difference;
-} */
+.container.deactivate{
+  display: none;
+}
+
+
