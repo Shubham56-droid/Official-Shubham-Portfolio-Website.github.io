@@ -32,7 +32,7 @@ I'm a passionate web developer with a strong foundation in computer science. I r
 
 ## 📈 GitHub Stats
 
-![Shubham's GitHub stats](https://github-readme-stats.vercel.app/api?username=your-username&show_icons=true&theme=radical)
+![Shubham's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shubham56-droid&show_icons=true&theme=radical)
 
 ---
 
