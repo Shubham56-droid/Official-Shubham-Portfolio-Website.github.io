@@ -7,9 +7,11 @@ document.addEventListener("mousemove", (e) => {
 
 // dark and light mode switching
 let content = document.getElementById("content");
-content.addEventListener("dblclick", () => {
+let body = document.body;
+body.addEventListener("dblclick", () => {
   content.classList.toggle("active");
 });
+
 
 let intro = document.getElementById("intro");
 
@@ -124,8 +126,22 @@ nextpage.addEventListener("click", () => {
   }, 800);
 });
 
+
+// box animation in opening js create element 
+const introInitBox = document.getElementById("introInitBox");
+const numofbox = 30;
+for (let i = 0; i < numofbox; i++) {
+   const bgbox = document.createElement("div");
+   bgbox.classList.add("bgbox");
+   const inbox = document.createElement("div");
+   inbox.classList.add("inbox");
+   bgbox.appendChild(inbox);
+   introInitBox.appendChild(bgbox);
+}
+
 const bgbox = document.querySelectorAll(".bgbox");
 const inbox = document.querySelectorAll(".inbox");
+
 const animationName = [
   "sliderightinitbox",
   "slideleftinitbox",
@@ -135,34 +151,31 @@ const animationName = [
 
 const openerAnimation = () => {
   for (let i = 0; i < inbox.length; i++) {
-    // let timedealy = ((Math.random() * 0.6) + 0).toFixed(2);
     let animateName2 = animationName[Math.floor(Math.random() * 4)];
-    // console.log(Math.floor(Math.random()*4));
-    // inbox[i].style.animationDelay = `${timedealy}s`;
-    console.log(animateName2);
     inbox[i].style.animation = `${animateName2} 2s 1 forwards`;
   }
 };
 
-// const inittextmutate = document.getElementById("inittextmutate");
-// inittextmutate.innerText = "Completed";
 
-const introInitBox = document.getElementById("introInitBox");
 setTimeout(() => {
   const inittextmutate = document.getElementById("inittextmutate");
   inittextmutate.innerText = "Completed";
   canvas1.classList.add("outroanimate");
 }, 5000);
+
 setTimeout(() => {
   const introInitContent = document.getElementById("introInitContent");
   introInitContent.classList.add("deactivate");
 }, 6500);
+
 setTimeout(() => {
   openerAnimation();
 }, 6500);
+
 setTimeout(() => {
   introInitBox.classList.add("deactivate");
 }, 8000);
+
 setTimeout(() => {
   box1.classList.remove("deactivate");
 }, 8100);
