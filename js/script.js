@@ -77,7 +77,7 @@ const cursorChange4 = (y) => {
 
 // cursor change type 5 - no cursor
 const cursorChange5 = () => {
-  document.addEventListener("mousemove", (e) => {
+  document.addEventListener("onload", (e) => {
     cursor.style.left = e.pageX + "px";
     cursor.style.top = e.pageY+ "px";
   });
@@ -300,7 +300,7 @@ const outro = document.getElementById("outro");
 const textboxbox3_1 = document.getElementById("textboxbox3_1");
 const textboxbox3_2 = document.getElementById("textboxbox3_2");
 const box4 = document.getElementById("box4");
-
+const skillbox4 = document.getElementById("skillbox4");
 
 box3info1.addEventListener("click",()=>{
   outro.classList.add("active");
@@ -345,13 +345,6 @@ introBox4Content.addEventListener('mouseover',function(e){
     box4text.style.textShadow = newShadow;
 })
 
-
-
-
-
-
-
-
 introBox4Content.addEventListener('mouseleave',()=>{
   box4light.style.height = '0px';
   box4light.style.width = '0px';
@@ -363,3 +356,27 @@ introBox4Content.addEventListener('mouseenter',()=>{
   box4light.style.width = '50px';
   box4light.classList.add('active');
 })
+
+
+function liquidCommon(index){
+  let box = document.querySelectorAll('.box');
+  let e = document.createElement('div');
+  e.setAttribute('class','drops');
+  box[index].appendChild(e);
+
+  let size = Math.random() * 50;
+  e.style.width = 10 + size + 'px';
+  let BoxWidth = box[index].clientWidth;
+  e.style.left = Math.random() * (BoxWidth + 10) + 'px';
+
+  setInterval(function(){
+      box[index].removeChild(e);
+  },6000);
+}
+
+
+setInterval(function(){
+  for (let i = 0; i < 9; i++) {
+    liquidCommon(i);
+  }
+},400);

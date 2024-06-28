@@ -1123,7 +1123,7 @@ canvas
   flex-direction: column;
   border-radius: 20px;
   z-index:20;
-  /* cursor: none; */
+  cursor: none;
 }
 
 .content .box4 .introbox .introBoxContent #box4text{
@@ -1165,8 +1165,6 @@ canvas
   display: flex;
 }
 
-
-
 @keyframes box4intromove1 
 {
   0%
@@ -1197,6 +1195,9 @@ canvas
   background-color: #272727;
   transform: translateX(0px);
   animation: box4intromove2 0.3s 1 ease;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 @keyframes box4intromove2 
 {
@@ -1260,4 +1261,128 @@ canvas
     background-color: #333;
     width:125px;
   }
+}
+
+.content .box4 .itemskillbox .skillbox4{
+  height: 100vh;
+  width: 85%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content .box4 .itemskillbox .skillbox4 .skill{
+  height: 140px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.content .box4 .itemskillbox .skillbox4 .skill .box{
+  height: 100%;
+  width:100%;
+  background: radial-gradient(#00d9ffa9,#009dff);
+  border-radius: 50%;
+  position: relative;
+  filter: url(#gooey1);
+  animation: animateskillopen 2.5s 1 ease-out;
+}
+.content .box4 .itemskillbox .skillbox4 .skill:nth-child(1) .box{
+  animation-delay: 0.1s;
+}
+.content .box4 .itemskillbox .skillbox4 .skill:nth-child(2) .box{
+  animation-delay: 0.2s;
+}
+.content .box4 .itemskillbox .skillbox4 .skill:nth-child(3) .box{
+  animation-delay: 0.3s;
+}
+.content .box4 .itemskillbox .skillbox4 .skill:nth-child(4) .box{
+  animation-delay: 0.4s;
+}
+.content .box4 .itemskillbox .skillbox4 .skill:nth-child(5) .box{
+  animation-delay: 0.5s;
+}
+.content .box4 .itemskillbox .skillbox4 .skill:nth-child(6) .box{
+  animation-delay: 0.6s;
+}
+.content .box4 .itemskillbox .skillbox4 .skill:nth-child(7) .box{
+  animation-delay: 0.7s;
+}
+.content .box4 .itemskillbox .skillbox4 .skill:nth-child(8) .box{
+  animation-delay: 0.8s;
+}
+@keyframes animateskillopen 
+{
+  0%
+  {
+    transform: scale(0);
+  }
+  50%
+  {
+    transform: scale(1.1);
+  }
+  100%
+  {
+    transform: scale(1);
+  }
+}
+
+.content .box4 .itemskillbox .skillbox4 .skill p{
+  position: absolute;
+  color:#fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.6em;
+  z-index: 100;
+  user-select: none;
+  animation: animateskilltextopen 2.5s 1 ease-out;
+}
+@keyframes animateskilltextopen
+{
+  0%
+  {
+    transform: scale(0);
+  }
+  100%
+  {
+    transform: scale(1);
+  }
+}
+.drops
+{
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    aspect-ratio: 1/1;
+    background: radial-gradient(#00d9ffa9,#009dff);
+    border-radius: 50%;
+    z-index: 1000;
+    animation: animate 5s ease-in-out backwards;
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: translateX(-50%) translateY(calc(110vh - 90%));
+    }
+    25%
+    {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    50%
+    {
+        transform: translateX(-50%) translateY(0);
+    }
+    75%
+    {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    100%
+    {
+        transform: translateX(-50%) translateY(calc(-60vh - 100%));
+    }
 }
