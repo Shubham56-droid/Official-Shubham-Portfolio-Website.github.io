@@ -159,7 +159,7 @@ const openerAnimation = () => {
 
 setTimeout(() => {
   const inittextmutate = document.getElementById("inittextmutate");
-  inittextmutate.innerText = "Completed";
+  inittextmutate.innerText = "Connected";
   canvas1.classList.add("outroanimate");
 }, 5000);
 
@@ -301,6 +301,7 @@ const textboxbox3_1 = document.getElementById("textboxbox3_1");
 const textboxbox3_2 = document.getElementById("textboxbox3_2");
 const box4 = document.getElementById("box4");
 
+
 box3info1.addEventListener("click",()=>{
   outro.classList.add("active");
   box3info1.classList.add("deactivate")
@@ -309,6 +310,56 @@ box3info1.addEventListener("click",()=>{
   box3.classList.add("deactive");
   setTimeout(() => {
     box3.classList.remove("activate");
-    box4.classList.remove("deactivate");
-  },1600);
+    box4.classList.add("activate");
+  },2000);
+})
+
+
+
+
+
+let box4text = document.getElementById("box4text");
+let box4light = document.getElementById("box4light");
+
+introBox4Content.addEventListener('mouseover',function(e){
+
+    let mouseX = e.clientX;
+    let mouseY = e.clientY;
+
+    box4light.style.left = mouseX + 'px';
+    box4light.style.top = mouseY + 'px';
+
+    let box4distanceX = mouseX - box4text.offsetLeft - box4text.offsetWidth / 2;
+
+    let box4distanceY = mouseY - box4text.offsetTop - box4text.offsetHeight / 2;
+
+    let newShadow = '';
+
+    for (let j=0; j<200; j++) 
+    {
+        let shadowX = -box4distanceX * (j/1200);
+        let shadowY = -box4distanceY * (j/1200);
+        let box4opacity = 1 - (j / 180);
+        newShadow += (newShadow ? ',' : '') + shadowX + 'px ' + shadowY + 'px 0 rgba(33,33,33,'+ box4opacity+')';
+    }
+    box4text.style.textShadow = newShadow;
+})
+
+
+
+
+
+
+
+
+introBox4Content.addEventListener('mouseleave',()=>{
+  box4light.style.height = '0px';
+  box4light.style.width = '0px';
+  box4text.style.textShadow = '8px 8px 5px #222';
+})
+
+introBox4Content.addEventListener('mouseenter',()=>{
+  box4light.style.height = '50px';
+  box4light.style.width = '50px';
+  box4light.classList.add('active');
 })
